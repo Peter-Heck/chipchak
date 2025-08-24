@@ -57,10 +57,6 @@ table {
 	--header-color: rgb(0, 0, 0);
 }
 
-img {
-	width: 100%;
-}
-
 html {
 	width: 100%;
 	margin: auto;
@@ -69,6 +65,26 @@ html {
 body {
 	width: 100%;
 	margin: auto;
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+h2 {
+	font-size: 2.5rem;
+}
+
+h3 {
+	font-size: 2rem;
+}
+
+h4 {
+	font-size: 1.5rem;
+}
+
+p {
+	font-size: 1rem;
 }
 
 header, footer {
@@ -82,13 +98,60 @@ header {
 	flex-direction: column-reverse;
 	align-items: center;
 	text-align: center;
+	padding-bottom: 20px;
+	padding-top: 20px;
 }
 
 header img {
 	width: 50%;
 	height: auto;
+	margin-bottom: 20px;
 }
 
-header h1 {
-	font-size: 3rem;
+main {
+	width: 80%;
+	margin: auto;
+}
+
+#bio {
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	padding-top: 20px;
+}
+
+#bio div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#bio h2 {
+	text-align: center;
+}
+
+#bio img {
+	width: 80%;
+	border-radius: 50%;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+#bio div p {
+	margin-bottom: 20px;
+}
+
+#portfolio {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#portfolio h3 {
+	padding-bottom: 20px;
+}
+
+#portfolio iframe {
+	height: 350px;
+	width: 100%;
 }
