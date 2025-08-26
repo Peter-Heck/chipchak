@@ -249,6 +249,10 @@ main {
 	font-size: 1.25rem;
 }
 
+#contact-info li span {
+	font-weight: bold;
+}
+
 #form-list {
 	margin-top: 10px;
 }
