@@ -84,7 +84,7 @@ h4 {
 }
 
 p {
-	font-size: 1rem;
+	font-size: 1.25rem;
 }
 
 header, footer {
@@ -246,6 +246,7 @@ main {
 
 #contact-info li {
 	padding: 10px 0 0;
+	font-size: 1.25rem;
 }
 
 #form-list {
@@ -262,6 +263,7 @@ main {
 	margin-bottom: 5px;
 	margin-top: 10px;
 	font-weight: bold;
+	font-size: 1.25rem;
 }
 
 #form-list li input {
@@ -281,7 +283,7 @@ main {
 	width: 80%;
 	padding: 10px 0;
 	margin: 5px 0;
-	font-size: 1em;
+	font-size: 1.25em;
 	border-radius: 20px;
 	margin-left: 10%;
 }
