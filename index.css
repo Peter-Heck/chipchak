@@ -139,6 +139,8 @@ main {
 	margin-bottom: 20px;
 	margin-top: 20px;
 	align-self: center;
+	border: solid 5px black;
+	border-radius: 50%;
 }
 
 #bio div p {
@@ -149,6 +151,42 @@ main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+#backward:active {
+	box-shadow: inset 0px 0px 7px 10px rgba(0, 0, 0, 0.2);
+	background-color: rgb(182, 182, 182);
+}
+
+#forward:active {
+	box-shadow: inset 0px 0px 7px 10px rgba(0, 0, 0, 0.2);
+	background-color: rgb(182, 182, 182);
+}
+
+#backward:hover {
+	cursor: pointer;
+	background-color: gray;
+	box-shadow: -7px -7px 5px rgba(0, 0, 0, 0.2);
+}
+
+#forward:hover {
+	cursor: pointer;
+	background-color: gray;
+	box-shadow: -7px -7px 5px rgba(0, 0, 0, 0.2);
+}
+
+#backward {
+	font-size: 4rem;
+	padding: 20px;
+	background-color: rgba(0, 0, 0, 0.2);
+	color: white;
+}
+
+#forward {
+	font-size: 4rem;
+	padding: 20px;
+	background-color: rgba(0, 0, 0, 0.2);
+	color: white;
 }
 
 #portfolio h3 {
