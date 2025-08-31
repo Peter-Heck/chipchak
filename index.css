@@ -229,6 +229,21 @@ main {
 	padding-bottom: 20px;
 }
 
+#music img {
+	width: 100%;
+	border: solid 5px black;
+	border-radius: 10px;
+	z-index: 0;
+}
+
+#music audio {
+	width: 100%;
+	z-index: 1;
+	position: relative;
+	top: -65px;
+	left: 5.5px;
+}
+
 #sample-downloads {
 	text-align: center;
 	width: 100%;
