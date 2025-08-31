@@ -380,3 +380,140 @@ footer {
 footer p {
 	margin-bottom: 20px;
 }
+
+
+
+
+/*----------------  DESKTOP VIEW   ----------------------------*/
+
+@media (min-width: 960px) {
+
+	#bio>div {
+		display: grid;
+		grid-template-areas:
+			"img p1 p1"
+			"img p2 p2"
+			"p3 p3 p3"
+			"p4 p4 p4";
+		grid-template-columns: 1fr 1fr 1fr;
+		align-items: center;
+	}
+
+	#bio>div img {
+		grid-area: img;
+	}
+
+	#p1 {
+		grid-area: p1;
+	}
+
+	#p2 {
+		grid-area: p2;
+	}
+
+	#p3 {
+		grid-area: p3;
+	}
+
+	#p4 {
+		grid-area: p4;
+	}
+
+	#bio div p {
+		margin-bottom: 20px;
+	}
+
+	#contact-form {
+		width: 500px;
+		margin: auto;
+	}
+
+}
+
+@media (min-width: 1281px) {
+
+	header {
+		display: grid;
+		grid-template-areas: "img header .";
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	header img {
+		grid-area: img;
+		width: 400px;
+		margin-left: 20px;
+	}
+
+	header h1 {
+		grid-area: header;
+	}
+
+	#bio>div {
+		grid-template-areas:
+			"img p1 p1 p1"
+			"img p2 p2 p2"
+			"img p3 p3 p3"
+			"img p4 p4 p4";
+		margin-top: 20px;
+	}
+
+	#music {
+		display: grid;
+		grid-template-areas: 
+			". title title ."
+			"silhouette silhouette mal mal"
+			". old old ."
+			"sample sample sample sample";
+		align-items: center;
+		text-align: center;
+	}
+
+	#music h2 {
+		grid-area: title;
+	}
+
+	#silhouette-music {
+		grid-area: silhouette;
+		width: 500px;
+		margin: auto;
+		margin-top: 20px;
+	}
+
+	#grand-mal-music {
+		grid-area: mal;
+		width: 500px;
+		margin: auto;
+		margin-top: 20px;
+	}
+
+	#how-old-music {
+		grid-area: old;
+		width: 500px;
+		margin: auto;
+	}
+
+	#sample-downloads {
+		grid-area: sample;
+		display: grid;
+		grid-template-areas: 
+			"title title"
+			"mp3 pdf";
+		align-items: center;
+	}
+
+	#sample-downloads h3 {
+		grid-area: title;
+	}
+
+	#mp3-section {
+		grid-area: mp3;
+		margin-right: 20px;
+	}
+
+	#pdf-section {
+		grid-area: pdf;
+		margin: 0;
+		margin-left: 20px;
+	}
+
+}
