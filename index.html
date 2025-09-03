@@ -112,15 +112,69 @@
 
 
 		<!-- Use Web3Forms for sending the email from the form to the email -->
-		<form id="contact-form">
+		<form method="POST" id="form">
+
+			<input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
 			<ul id="form-list">
-				<li><label for="email">Your Email Address:</label>
-					<input type="email" id="email" name="email" required></li>
-				<li><label for="message">Your Message:</label>
-					<textarea id="message" name="message" rows="6" required></textarea></li>
-				<li><input type="submit" value="Submit" id="submit"></li>
+				<li><label for="name">Name: </label>
+				<input type="text" name="name" id="name" required></li>
+
+				<li><label for="email">Email: </label>
+				<input type="email" name="email" id="email" required></li>
+
+				<li><label for="message">Message: </label>
+				<textarea name="message" id="message" rows="6" required></textarea></li>
+
+				<li><input type="checkbox" name="botcheck" class="hidden" style="display: none;" id="hidden-check-botcheck"></li>
+
+				<li><button type="submit" id="submit">Submit Form</button></li>
 			</ul>
+
+			<div id="result"></div>
+
 		</form>
+
+		<!-- Web3Forms script -->
+		<script>
+		const form = document.getElementById('form');
+		const result = document.getElementById('result');
+
+		form.addEventListener('submit', function(e) {
+		e.preventDefault();
+		const formData = new FormData(form);
+		const object = Object.fromEntries(formData);
+		const json = JSON.stringify(object);
+		result.innerHTML = "Please wait..."
+
+			fetch('https://api.web3forms.com/submit', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json',
+						'Accept': 'application/json'
+					},
+					body: json
+				})
+				.then(async (response) => {
+					let json = await response.json();
+					if (response.status == 200) {
+						result.innerHTML = "Form submitted successfully";
+					} else {
+						console.log(response);
+						result.innerHTML = json.message;
+					}
+				})
+				.catch(error => {
+					console.log(error);
+					result.innerHTML = "Something went wrong!";
+				})
+				.then(function() {
+					form.reset();
+					setTimeout(() => {
+						result.style.display = "none";
+					}, 3000);
+				});
+		});
+		</script>
 	</section>
 </main>
 
