@@ -54,7 +54,10 @@ table {
 
 :root {
 	font-family: Arial, Helvetica, sans-serif;
-	--header-color: rgb(0, 0, 0);
+	--border-color: rgb(136, 0, 199);
+	--button-back-color: rgb(40, 0, 58);
+	--header-color: radial-gradient(var(--border-color), var(--button-back-color) 60%);
+	--button-color: radial-gradient(circle, var(--button-back-color) 50%, var(--border-color));
 }
 
 html {
@@ -88,7 +91,7 @@ p {
 }
 
 header, footer {
-	background-color: var(--header-color);
+	background-image: var(--header-color);
 	color: white;
 	width: 100%;
 }
@@ -106,7 +109,6 @@ header img {
 	width: 50%;
 	height: auto;
 	margin-bottom: 20px;
-	background-color: white;
 }
 
 main {
@@ -139,7 +141,7 @@ main {
 	margin-bottom: 20px;
 	margin-top: 20px;
 	align-self: center;
-	border: solid 5px black;
+	border: solid 5px var(--border-color);
 	border-radius: 50%;
 }
 
@@ -196,7 +198,7 @@ main {
 
 #portfolio img {
 	width: 100%;
-	border: solid 5px black;
+	border: solid 5px var(--border-color);
 	border-radius: 10px;
 }
 
@@ -231,7 +233,7 @@ main {
 
 #music img {
 	width: 100%;
-	border: solid 5px black;
+	border: solid 5px var(--border-color);
 	border-radius: 10px;
 	z-index: 0;
 }
@@ -275,22 +277,23 @@ main {
 #sample-downloads section ul li a {
 	display: block;
 	text-decoration: none;
-	background-color: black;
+	background-image: var(--button-color);
 	color: white;
 	width: 100%;
 	padding: 20px 0;
 	margin: 5px 0;
 	font-size: 1.5em;
 	border-radius: 20px;
+	border: solid 5px var(--border-color);
 }
 
 #sample-downloads section ul li a:hover {
 	background-color: gray;
-	box-shadow: -7px -7px 5px rgba(0, 0, 0, 0.2);
+	box-shadow: -7px -7px 5px rgba(0, 0, 0, 0.5);
 }
 
 #sample-downloads section ul li a:active {
-	box-shadow: inset 0px 0px 7px 10px rgba(0, 0, 0, 0.2);
+	box-shadow: inset 0px 0px 7px 10px rgba(0, 0, 0, 0.5);
 	background-color: rgb(182, 182, 182);
 }
 
@@ -336,18 +339,18 @@ main {
 }
 
 #form-list li input {
-	border: solid 3px black;
+	border: solid 3px var(--border-color);
 	border-radius: 5px;
 }
 
 #form-list li textarea {
-	border: solid 3px black;
+	border: solid 3px var(--border-color);
 	border-radius: 5px;
 }
 
 #submit {
-	border: solid 0px black;
-	background-color: black;
+	border: solid 0px var(--border-color);
+	background-image: var(--button-color);
 	color: white;
 	width: 80%;
 	padding: 10px 0;
@@ -359,14 +362,14 @@ main {
 
 #submit:hover {
 	background-color: gray;
-	box-shadow: -7px -7px 5px rgba(0, 0, 0, 0.2);
-	border-color: gray;
+	box-shadow: -7px -7px 5px rgba(0, 0, 0, 0.5);
+	border-color: var(--border-color);
 }
 
 #submit:active {
-	box-shadow: inset 0px 0px 7px 10px rgba(0, 0, 0, 0.2);
+	box-shadow: inset 0px 0px 7px 10px rgba(0, 0, 0, 0.5);
 	background-color: rgb(182, 182, 182);
-	border-color: gray;
+	border-color: var(--border-color);
 }
 
 footer {
@@ -378,7 +381,7 @@ footer {
 }
 
 footer p {
-	margin-bottom: 20px;
+	margin-bottom: 0px;
 }
 
 
