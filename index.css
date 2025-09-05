@@ -52,6 +52,7 @@ table {
 
 /*    THIS IS MY CSS     */
 
+/* General CSS */
 :root {
 	font-family: Arial, Helvetica, sans-serif;
 	--border-color: rgb(136, 0, 199);
@@ -96,6 +97,10 @@ header, footer {
 	width: 100%;
 }
 
+/*---------------- Mobile and small views --------------------------*/
+
+
+/* Header */
 header {
 	display: flex;
 	flex-direction: column-reverse;
@@ -111,11 +116,13 @@ header img {
 	margin-bottom: 20px;
 }
 
+/* Main */
 main {
 	width: 80%;
 	margin: auto;
 }
 
+	/* Bio */
 #bio {
 	margin: auto;
 	display: flex;
@@ -124,7 +131,7 @@ main {
 	padding-bottom: 20px;
 }
 
-#bio>div {
+#bio>div { /*Targets picture and paragraph area*/
 	display: flex;
 	flex-direction: column;
 	align-items: start;
@@ -135,7 +142,7 @@ main {
 	text-align: center;
 }
 
-#bio>div img {
+#bio>div img { /*Targets image in bio next to paragraphs*/
 	width: 80%;
 	border-radius: 50%;
 	margin-bottom: 20px;
@@ -149,12 +156,14 @@ main {
 	margin-bottom: 20px;
 }
 
+	/*Portfolio section*/
 #portfolio {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
+		/*Portfolio image carousel*/
 #backward:active {
 	box-shadow: inset 0px 0px 7px 10px rgba(0, 0, 0, 0.2);
 	background-color: rgb(182, 182, 182);
@@ -213,6 +222,7 @@ main {
 	padding: 20px 50px;
 }
 
+	/*Music section*/
 #music {
 	padding-top: 20px;
 	padding-bottom: 20px;
@@ -245,7 +255,8 @@ main {
 	top: -65px;
 	left: 5.5px;
 }
-
+	
+	/*Sample music downloads section*/
 #sample-downloads {
 	text-align: center;
 	width: 100%;
@@ -302,6 +313,7 @@ main {
 	margin-bottom: 10px;
 }
 
+	/*Contact info section*/
 #contact h2 {
 	text-align: center;
 }
@@ -321,6 +333,7 @@ main {
 	font-weight: bold;
 }
 
+	/*Contact form*/
 #form-list {
 	margin-top: 10px;
 }
@@ -372,6 +385,7 @@ main {
 	border-color: var(--border-color);
 }
 
+/*Footer*/
 footer {
 	display: flex;
 	flex-direction: column;
